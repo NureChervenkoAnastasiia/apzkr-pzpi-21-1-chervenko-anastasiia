@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hello, Worker!</h2>
+        <ul>
+            <li id="orders">Orders</li>
+            <li id="tables">Tables</li>
+            <li id="profile">My Profile</li>
+            <li class="sidebar-selected" id="schedule">Schedule</li>
+            <li id="menu">Menu</li>
+            <li id="logout">Log out</li>
+        </ul>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Schedule</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+        </div>
+        <div id="popularity-container" style="display:none;"></div>
+        <div class="table-container">
+            <table id="schedule">
+                <thead>
+                    <tr>
+                        <th>Staff name</th>
+                        <th>Shift START Date and Time</th>
+                        <th>Shift END Date and Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr class="fill-in-fields">
+                        <td>
+                            <select id="input-staff">
+                                <!-- Staff names will be populated by JavaScript -->
+                            </select>
+                        </td>
+                        <td><input type="datetime-local" placeholder="Start" id="input-start"></td>
+                        <td><input type="datetime-local" placeholder="End" id="input-end"></td>
+                        <td colspan="2"><button class="btn-add">Add New</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="../../components/staff/Schedule.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hello, Worker!</h2>
+        <ul>
+            <li id="orders">Orders</li>
+            <li id="tables">Tables</li>
+            <li class="sidebar-selected" id="profile">My Profile</li>
+            <li id="schedule">Schedule</li>
+            <li id="menu">Menu</li>
+            <li id="logout">Log out</li>
+        </ul>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>My profile</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+        </div>
+        <div id="staff-info">
+            <!-- Information about the staff member will be displayed here -->
+        </div>
+        <button class="btn-edit" id="edit-button">Edit</button>
+        <button class="btn-save" id="save-button" style="display: none;">Save</button>
+    </div>
+    <script src="../../components/staff/Profile.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tastify</title>
+    <link rel="stylesheet" href="../css/StaffLogin.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1 data-translate="welcome">Welcome to <img src="../../public/images/logo.png" class="logo"></h1>
+
+    <form id="loginForm">
+      <input type="text" name="login" id="login" placeholder="Login" data-translate="login" required>
+      <input type="password" name="password" id="password" placeholder="Password" data-translate="password" required>
+      <button type="submit" data-translate="start">Start</button>
+    </form>
+    <div class="language-selector">
+      <select id="language-select">
+          <option value="en">English</option>
+          <option value="ua">Українська</option>
+      </select>
+  </div>
+    <div id="error-message" style="color:red;" data-translate="error_message"></div>
+</div>
+
+<script src="../components/Login.js"></script>
+</body>
+</html>

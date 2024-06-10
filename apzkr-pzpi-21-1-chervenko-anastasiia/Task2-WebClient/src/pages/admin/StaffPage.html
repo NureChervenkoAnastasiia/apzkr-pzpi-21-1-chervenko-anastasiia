@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 data-translate="hello_admin">Hello, Admin!</h2>
+        <ul>
+            <li id="orders" data-translate="orders">Orders</li>
+            <li id="bookings" data-translate="bookings">Bookings</li>
+            <li id="tables" data-translate="tables">Tables</li>
+            <li class="sidebar-selected" id="staff" data-translate="staff">Staff</li>
+            <li id="schedule" data-translate="schedule">Schedule</li>
+            <li id="restaurant" data-translate="restaurant">Restaurant</li>
+            <li id="menu" data-translate="menu">Menu</li>
+            <li id="products" data-translate="products">Products</li>
+            <li id="database" data-translate="database">Database</li>
+            <li id="logout" data-translate="logout">Log out</li>
+        </ul>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1 data-translate="staff">Staff</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+        </div>
+        <div id="popularity-container" style="display:none;"></div>
+
+        <label for="input-date" data-translate="choose_first_day">Choose first day of week to get workers hours report</label><hr>
+        <input type="date" id="input-date">
+        <button class="btn-fetch-hours" data-translate="get_workers_report">Get workers report</button>
+        <div id="working-hours-container"></div>
+
+        <div class="table-container">
+            <table id="staff-table">
+                <thead>
+                    <tr>
+                        <th data-translate="name">Name</th>
+                        <th data-translate="position">Position</th>
+                        <th data-translate="hourly_salary">Hourly salary</th>
+                        <th data-translate="phone">Phone</th>
+                        <th data-translate="attendance_card">Attendance Card</th>
+                        <th data-translate="login">Login</th>
+                        <th data-translate="restaurant">Restaurant</th>
+                        <th data-translate="edit">Edit</th>
+                        <th data-translate="delete">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr class="fill-in-fields">
+                        <td><input type="text" placeholder="Name" id="input-name"></td>
+                        <td>
+                            <select id="input-position">
+                                <option value="Кухар">Кухар</option>
+                                <option value="Офіціант">Офіціант</option>
+                                <option value="Помічник">Помічник</option>
+                                <option value="Адміністратор">Адміністратор</option>
+                            </select>
+                        </td>
+                        <td><input type="number" placeholder="Hourly Salary" id="input-salary"></td>
+                        <td><input type="number" placeholder="Phone" id="input-phone"></td>
+                        <td><input type="number" placeholder="Attendance Card" id="input-card"></td>
+                        <td><input type="text" placeholder="Login" id="input-login"></td>
+                        <td>
+                            <select id="input-restaurant">
+                                <!-- Restaurant names will be populated by JavaScript -->
+                            </select>
+                        </td>
+                        <td colspan="2"><button class="btn-add" data-translate="add_new">Add New</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="../../components/admin/Staff.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>

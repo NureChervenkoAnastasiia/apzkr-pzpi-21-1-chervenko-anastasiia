@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hello, Worker!</h2>
+        <ul>
+            <li id="orders">Orders</li>
+            <li id="tables">Tables</li>
+            <li id="profile">My Profile</li>
+            <li id="schedule">Schedule</li>
+            <li class="sidebar-selected" class="sidebar-selected" id="menu">Menu</li>
+            <li id="logout">Log out</li>
+        </ul>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Restaurant Menu</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <div class="filters">
+                    <label>Choose to see:</label>
+                    <input type="radio" name="filter" value="menu" checked> Full Menu
+                    <input type="radio" name="filter" value="first-dishes"> First dishes
+                    <input type="radio" name="filter" value="second-dishes"> Second dishes
+                    <input type="radio" name="filter" value="drinks"> Drinks
+                    <button id="filter-button">Go</button>
+                </div>
+            </div>
+        </div>
+        <div id="popularity-container" style="display:none;"></div>
+
+        <div class="table-container">
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Info</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../../components/staff/Menu.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>

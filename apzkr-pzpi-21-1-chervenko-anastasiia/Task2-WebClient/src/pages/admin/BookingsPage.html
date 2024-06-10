@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Hello, Admin!</h2>
+        
+        <ul>
+            <li id="orders">Orders</li>
+            <li class="sidebar-selected" id="bookings">Bookings</li>
+            <li id="tables">Tables</li>
+            <li id="staff">Staff</li>
+            <li id="schedule">Schedule</li>
+            <li id="restaurant">Restaurant</li>
+            <li id="menu">Menu</li>
+            <li id="products">Products</li>
+            <li id="database">Database</li>
+            <li id="logout">Log out</li>
+        </ul>
+        <br>
+        
+        <br>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Bookings</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+        </div>
+        <div class="bookings-container">
+            <table id="bookings-table">
+                <thead>
+                    <tr>
+                        <th>Table</th>
+                        <th>Guest</th>
+                        <th>Date and Time</th>
+                        <th>Persons</th>
+                        <th>Comment</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr class="fill-in-fields">
+                        <td><select id="input-table"><!-- Table numbers will be populated by JavaScript --></select></td>
+                        <td><select id="input-guest"><!-- Guest names will be populated by JavaScript --></select></td>
+                        <td><input type="datetime-local" placeholder="Date and time" id="input-datetime"></td>
+                        <td><input type="number" placeholder="Persons count" id="input-number"></td>
+                        <td><input type="text" placeholder="Comment" id="input-text"></td>
+                        <td colspan="2"><button class="btn-add">Add New</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="../../components/admin/Booking.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>

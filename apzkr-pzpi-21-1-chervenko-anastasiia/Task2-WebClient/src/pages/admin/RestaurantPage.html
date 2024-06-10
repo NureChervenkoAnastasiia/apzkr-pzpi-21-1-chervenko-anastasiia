@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastify</title>
+    <link rel="stylesheet" href="../../App.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 data-translate="hello_admin">Hello, Admin!</h2>
+        <ul>
+            <li id="orders" data-translate="orders">Orders</li>
+            <li id="bookings" data-translate="bookings">Bookings</li>
+            <li id="tables" data-translate="tables">Tables</li>
+            <li id="staff" data-translate="staff">Staff</li>
+            <li id="schedule" data-translate="schedule">Schedule</li>
+            <li class="sidebar-selected" id="restaurant" data-translate="restaurant">Restaurant</li>
+            <li id="menu" data-translate="menu">Menu</li>
+            <li id="products" data-translate="products">Products</li>
+            <li id="database" data-translate="database">Database</li>
+            <li id="logout" data-translate="logout">Log out</li>
+        </ul>
+        <img src="../../../public/images/logo-light.png" class="logo">
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1 data-translate="restaurant">Restaurant</h1>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+        </div>
+        <div class="restaurant-container">
+            <!-- Информация о ресторане будет загружена сюда -->
+        </div>
+    </div>
+    <script src="../../components/admin/Restaurant.js"></script>
+    <script src="../../App.js"></script>
+</body>
+</html>
