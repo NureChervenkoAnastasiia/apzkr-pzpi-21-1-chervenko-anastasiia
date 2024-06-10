@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TastifyAPI", "TastifyAPI\TastifyAPI.csproj", "{00CA1E9F-1B89-4995-BE0D-13A07C0D22E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00CA1E9F-1B89-4995-BE0D-13A07C0D22E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00CA1E9F-1B89-4995-BE0D-13A07C0D22E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00CA1E9F-1B89-4995-BE0D-13A07C0D22E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00CA1E9F-1B89-4995-BE0D-13A07C0D22E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5BC478D-8B0B-4C10-9A83-A0A79E353839}
+	EndGlobalSection
+EndGlobal
